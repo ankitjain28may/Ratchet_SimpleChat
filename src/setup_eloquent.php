@@ -1,7 +1,7 @@
 <?php
-use \Illuminate\Database\Capsule\Manager as Capsule;
-use \Illuminate\Events\Dispatcher;
-use \Illuminate\Container\Container;
+use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Events\Dispatcher;
+use Illuminate\Container\Container;
 
 date_default_timezone_get("Europe/London");
 
@@ -25,5 +25,3 @@ $capsule->addConnection([
 $capsule->setEventDispatcher(new Dispatcher(new $container));
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
-
-?>
